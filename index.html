@@ -69,13 +69,16 @@
 <ul id='map-ui'></ul>
 <div id='map'></div>
 <script>
-var map = L.mapbox.map('map', 'slugis.mw1giudi');
+// Allows teaser to function when mouse hovers over, 
+// double-click allows 'Full' to function.
+var map = L.mapbox.map('map', 'slugis.hm7bff2l');
 map.gridControl.options.follow = true;
 var ui = document.getElementById('map-ui');
 
-addLayer(L.mapbox.tileLayer('slugis.hgaplkdi'), 'Base Map', 1);
-addLayer(L.mapbox.tileLayer('slugis.mw1giudi'), 'Projects', 3);
-addLayer(L.mapbox.tileLayer('slugis.nq74lsor'), 'Treatments', 2);
+addLayer(L.mapbox.tileLayer('slugis.nq74lsor'), 'Treatments', 1);
+addLayer(L.mapbox.tileLayer('slugis.w55ng66r'), 'Completed Projects', 2);
+addLayer(L.mapbox.tileLayer('slugis.o1ypsyvi'), 'Active Projects', 3);
+addLayer(L.mapbox.tileLayer('slugis.0z6hto6r'), 'Support Points', 4);
 
 function addLayer(layer, name, zIndex) {
     layer
